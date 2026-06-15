@@ -1,14 +1,21 @@
-# About This Program: 
-# Chrono-Health & Focus Monitor
+<img width="1424" height="752" alt="image_806437d1" src="https://github.com/user-attachments/assets/38a7dab2-d88d-4688-93bc-91b8b09a7166" />
 
-It is a minimalist, lightweight terminal-based background automation tool engineered to protect developers from digital eye strain and prolonged sedentary behavior. This utility implements a multi-sensory notification system, combining local audio text-to-speech instructions with native visual system desktop dialog prompts.
+
+### About This Program
+# Python Ergonomic Assistant
+
+An automated desktop utility designed to combat Digital Eye Strain and sedentary fatigue using structured break intervals....by being a minimalist, lightweight terminal-based background automation tool engineered to protect developers from digital eye strain and prolonged sedentary behavior. This utility implements a multi-sensory notification system, combining local audio text-to-speech instructions with native visual system desktop dialog prompts.
 
 
 ## Why This Tool is Necessary
 
+Like many developers, I get so locked into coding that I forget to blink or stand up. To fix my own bad habits, I built a lightweight Python script that acts as an ergonomic guardian. It quietly triggers reminders every 20 minutes to rest your eyes and every 45 minutes to stretch. Check out the repository to see the clean code architecture and how you can run it on your own machine!
+
+The Problem: 
+Digital Eye Strain drops natural human blinking by 50%, leading to fatigue and reduced developer productivity.
+
 Focusing on digital displays for extended periods leads to **Digital Eye Strain** (Computer Vision Syndrome) and physical fatigue. Because computer screens are made of thousands of tiny, shifting pixels rather than solid ink, they force our eyes to work much harder than a printed page. 
 
-This program automates the health intervals required to protect your body and vision based on how our biology reacts to screens:
 
 ### 👁️ The Science Behind the 20-Minute Eye Break
 * **Reduced Blink Rate:** Humans normally blink 15–17 times per minute. When staring at a screen, blinking drops by up to 50% (down to 3–7 times per minute), causing rapid tear evaporation, dryness, and irritation.
@@ -21,7 +28,7 @@ This program automates the health intervals required to protect your body and vi
 * **Metabolic Slump:** Prolonged sitting slows down your metabolism and reduces your body's ability to regulate blood sugar and break down fats.
 * **Circulation Reset:** Standing up every 45 minutes re-engages major muscle groups, triggers healthy blood circulation, and prevents long-term musculoskeletal stiffness.
 
-
+This program automates the health intervals required to protect your body and vision based on how our biology reacts to screens. It is a lightweight Python background application automating healthy micro-break schedules.
 
 ## Program Features
 - **Zero-CPU Standby Footprint:** Utilizes operating system kernel-level thread scheduling (`time.sleep`) instead of continuous active polling loops to preserve machine battery lifespan.
