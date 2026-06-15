@@ -1,12 +1,38 @@
+# About This Program: 
 # Chrono-Health & Focus Monitor
 
-A minimalist, lightweight terminal-based background automation tool engineered to protect developers from digital eye strain and prolonged sedentary behavior. This utility implements a multi-sensory notification system, combining local audio text-to-speech instructions with native visual system desktop dialog prompts.
+It is a minimalist, lightweight terminal-based background automation tool engineered to protect developers from digital eye strain and prolonged sedentary behavior. This utility implements a multi-sensory notification system, combining local audio text-to-speech instructions with native visual system desktop dialog prompts.
 
-## Features
+
+## Why This Tool is Necessary
+
+Focusing on digital displays for extended periods leads to **Digital Eye Strain** (Computer Vision Syndrome) and physical fatigue. Because computer screens are made of thousands of tiny, shifting pixels rather than solid ink, they force our eyes to work much harder than a printed page. 
+
+This program automates the health intervals required to protect your body and vision based on how our biology reacts to screens:
+
+### 👁️ The Science Behind the 20-Minute Eye Break
+* **Reduced Blink Rate:** Humans normally blink 15–17 times per minute. When staring at a screen, blinking drops by up to 50% (down to 3–7 times per minute), causing rapid tear evaporation, dryness, and irritation.
+* **Incomplete Blinking:** Intense screen focus causes "partial blinks," where the eyelids fail to close completely, leaving the lower half of the eye exposed and dry.
+* **Constant Micro-Focusing:** Because pixelated text has soft edges, the ciliary muscles in your eyes must constantly flex and refocus to keep the image sharp, leading to rapid muscle fatigue.
+* **Muscular Lock:** Looking at close objects requires your inner eye muscles to contract heavily to pull your eyes inward. A 20-second break looking at something 20 feet away resets and relaxes these locked muscles.
+
+### 🪑 The Science Behind the 45-Minute Desk Break
+* **Postural Fatigue:** Sitting static locks your spine, hips, and neck into position, restricting blood flow and causing slouching.
+* **Metabolic Slump:** Prolonged sitting slows down your metabolism and reduces your body's ability to regulate blood sugar and break down fats.
+* **Circulation Reset:** Standing up every 45 minutes re-engages major muscle groups, triggers healthy blood circulation, and prevents long-term musculoskeletal stiffness.
+
+
+
+## Program Features
 - **Zero-CPU Standby Footprint:** Utilizes operating system kernel-level thread scheduling (`time.sleep`) instead of continuous active polling loops to preserve machine battery lifespan.
 - **20-20-20 Rule Enforcement:** Automatically triggers visual and vocal reminders every 20 minutes to reduce eye muscle fatigue.
 - **Randomized Ergonomic Assignments:** Keeps wellness breaks unpredictable and engaging by drawing physical stretches randomly from a customizable runtime matrix.
 - **Blocking Modal User Interface:** Deploys native system-level alert dialog windows that remain pinned to the foreground until manually dismissed by clicking "OK".
+
+---
+
+## How It Works
+The script runs as a continuous, silent background process directly within your workspace terminal. Every minute it checks session runtimes boundaries against configured parameters. When parameters match, it executes audio instructions followed by a blocking interface window.
 
 ---
 
@@ -63,8 +89,17 @@ def trigger_alert(display_message, speech_text, alert_title):
 ## Configuration & Local Deployment
 
 ### 1. Customization
+
 - **Clone or download** the script file inside your chosen local workspace folder directory.
+
+You can easily adjust execution timing parameters and string targets by opening monitor.py in a raw text editor.
+  
 - **Open `monitor.py`** with any raw text editor to easily customize variables (`EYE_BREAK_INTERVAL`, `CHAIR_BREAK_INTERVAL`, or specific text strings within `MOVEMENT_TASKS`).
+
+Modify EYE_BREAK_INTERVAL or CHAIR_BREAK_INTERVAL constants at the top of the file to change alert windows (measured in minutes).
+
+Update the strings inside the MOVEMENT_TASKS multi-dimensional array to feature your own personalized stretch routines.
+
 
 ### 2. Execution Runpath
 To boot up the monitoring engine workspace environment, open your terminal directory and execute:
